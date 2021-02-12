@@ -1,10 +1,11 @@
+import game.Algorithms;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class MainTest {
+class AlgorithmsTest {
     @Test
     void belongsToNextHalf() {
         char[] letters = new char[]{'A', 'B', 'C', 'D', 'E'};
@@ -21,7 +22,7 @@ class MainTest {
         for (final List<Integer> testCase : testCases) {
             final Integer index = testCase.get(0);
             final Integer pivot = testCase.get(1);
-            assertTrue(Main.belongsToNextHalf(index, pivot, testCase.get(2)),
+            assertTrue(Algorithms.belongsToNextHalf(index, pivot, testCase.get(2)),
                        () -> "Expected to have: " + letters[index] + " > " + letters[pivot] + "\n" +
                                "Indexes are: " + testCase);
         }
